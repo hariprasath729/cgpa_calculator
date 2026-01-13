@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CGPA Calculator</title>
+<link rel="stylesheet" href="style.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.19.3/xlsx.full.min.js"></script>
+<script defer src="app.js"></script>
+</head>
+<body>
+
+<header class="top">
+  <h1>CGPA Calculator</h1>
+  <div class="controls">
+    <select id="dept">
+      <option value="">Department</option>
+      <option value="AIDS">AI & DS</option>
+    </select>
+    <select id="sem">
+      <option value="">Semester</option>
+      <option value="1">1</option><option value="2">2</option>
+      <option value="3">3</option><option value="4">4</option>
+      <option value="5">5</option><option value="6">6</option>
+      <option value="7">7</option><option value="8">8</option>
+    </select>
+  </div>
+</header>
+
+<main>
+<div id="uploadBox" class="upload">
+  <p><b>Drag & Drop</b> PDF / Excel / CSV<br/>or <u>Click to Upload</u></p>
+  <input type="file" id="fileInput" accept=".pdf,.xlsx,.csv" />
+  <a href="CGPA_Grade_Upload_Template.xlsx" download class="template-link">
+    The order of the excel file should be Subject - Code | Subject Title | Grade
+  </a>
+</div>
+
+
+<table>
+<thead>
+<tr><th>Subject</th><th>Credits</th><th>Grade</th><th></th></tr>
+</thead>
+<tbody id="tbody"></tbody>
+</table>
+
+<div class="credit-summary">
+  Total Credits Counted: <span id="totalCredits">0</span>
+</div>
+
+<div class="table-actions">
+  <button id="add">+ Add Subject</button>
+
+  <div class="history-actions">
+    <button id="saveCgpa" title="Save CGPA">💾 Save</button>
+    <button id="openHistory" title="Open History">📜 History</button>
+  </div>
+</div>
+
+</main>
+
+<footer class="cgpa">
+  <span>
+  <span class="info-icon" tabindex="0">ℹ️
+    <span class="tooltip">
+      Please verify your grades and credits carefully for correct CGPA.
+    </span>
+    </span>
+    CGPA
+  </span>
+
+ 
+
+  <strong id="cgpa">0.00</strong>
+</footer>
+<!-- Custom Modal -->
+<div id="modalOverlay" class="modal hidden">
+  <div class="modal-card">
+    <h3 id="modalTitle"></h3>
+    <input id="modalInput" type="text" />
+    <p id="modalMessage" class="modal-message"></p>
+    <div class="modal-actions">
+      <button id="modalCancel">Cancel</button>
+      <button id="modalConfirm">Confirm</button>
+    </div>
+  </div>
+</div>
+
+<div id="historyPanel" class="history-panel">
+  <h3>Saved CGPA</h3>
+  <ul id="historyList"></ul>
+  <button onclick="closeHistory()">Close</button>
+</div>
+
+</body>
+</html>
