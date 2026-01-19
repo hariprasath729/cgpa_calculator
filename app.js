@@ -89,6 +89,95 @@ const PRESETS = {
       { name: "Open Elective III", credits: 3 },
       { name: "Project Work (AD23821)", credits: 10 }
     ]
+  },
+  AIML: {
+    1: [
+      { name: "Communicative English (HS23111)", credits: 3 },
+      { name: "Engineering Chemistry (CY23111)", credits: 3 },
+      { name: "Matrices and Calculus (MA23111)", credits: 4 },
+      { name: "Problem Solving and C Programming (GE23111)", credits: 3 },
+      { name: "Heritage of Tamils (GE23112)", credits: 0 },
+      { name: "Engineering Graphics (GE23131)", credits: 4 },
+      { name: "Chemistry Laboratory (CY23121)", credits: 1 },
+      { name: "Problem Solving and C Programming Laboratory (GE23121)", credits: 1 },
+      { name: "Engineering Practices Laboratory (GE23122)", credits: 1 }
+    ],
+
+    2: [
+      { name: "Professional English (HS23211)", credits: 2 },
+      { name: "Statistics and Numerical Methods (MA23211)", credits: 4 },
+      { name: "Physics for Information Science (PH23211)", credits: 3 },
+      { name: "Basic Electrical and Electronics Engineering (GE23211)", credits: 3 },
+      { name: "Python for Data Science (AD23211)", credits: 3 },
+      { name: "Tamils and Technology (GE23213)", credits: 0 },
+      { name: "Data Structures and Design (AD23231)", credits: 4 },
+      { name: "Physics Laboratory (PH23221)", credits: 1 },
+      { name: "Python for Data Science Laboratory (AD23221)", credits: 1 },
+      { name: "Communication Laboratory / Foreign Language (GE23221)", credits: 1 }
+    ],
+
+    3: [
+      { name: "Discrete Mathematics (MA23311)", credits: 4 },
+      { name: "Artificial Intelligence (AL23311)", credits: 3 },
+      { name: "Object Oriented Programming (CS23312)", credits: 3 },
+      { name: "Database Management Systems (CS23411)", credits: 3 },
+      { name: "Digital Principles and Computer Organization (EC23331)", credits: 4 },
+      { name: "Artificial Intelligence Laboratory (AL23321)", credits: 1 },
+      { name: "Database Management Systems Laboratory (CS23421)", credits: 1 },
+      { name: "Object Oriented Programming Laboratory (CS23322)", credits: 1 },
+      { name: "Data Wrangling (AD231C1)", credits: 1 }
+    ],
+
+    4: [
+      { name: "Environmental Sciences and Sustainability (GE23411)", credits: 2 },
+      { name: "Formal Language and Automata Theory (AD23412)", credits: 4 },
+      { name: "Data Analytics (AD23411)", credits: 3 },
+      { name: "Machine Learning (AL23411)", credits: 3 },
+      { name: "Operating Systems (CS23412)", credits: 3 },
+      { name: "Design and Analysis of Algorithms (CS23431)", credits: 4 },
+      { name: "Machine Learning Laboratory (AL23421)", credits: 1 },
+      { name: "Data Analytics Laboratory (AD23421)", credits: 1 },
+      { name: "Operating Systems Laboratory (CS23422)", credits: 1 },
+      { name: "Introduction to Azure Machine Learning (AD231C1)", credits: 1 },
+    ],
+
+    5: [
+      { name: "Deep Learning for Computer Vision (AL23511)", credits: 3 },
+      { name: "Computer Networks (CS23511)", credits: 3 },
+      { name: "Professional Elective I", credits: 3 },
+      { name: "Professional Elective II", credits: 3 },
+      { name: "Mandatory Course I", credits: 0 },
+      { name: "Natural Language Processing (AL23531)", credits: 4 },
+      { name: "Big Data Analytics (AD23531)", credits: 4 },
+      { name: "Deep Learning for Computer Vision Laboratory (AL23521)", credits: 1 },
+      { name: "Computer Networks Laboratory (CS23521)", credits: 1 },
+      { name: "Industry Oriented Course III", credits: 1 }
+    ],
+
+    6: [
+      { name: "Professional Elective III", credits: 3 },
+      { name: "Professional Elective IV", credits: 3 },
+      { name: "Open Elective I", credits: 3 },
+      { name: "Open Elective II", credits: 3 },
+      { name: "Mandatory Course II", credits: 0 },
+      { name: "Embedded Systems and IoT (EC23631)", credits: 4 },
+      { name: "Object Oriented Software Engineering (CS23631)", credits: 4 },
+      { name: "Mini Project (AL23621)", credits: 2 },
+    ],
+
+    7: [
+      { name: "Human Values and Ethics (GE23711)", credits: 2 },
+      { name: "Elective – Management", credits: 3 },
+      { name: "Cryptography and Cyber Security (CS23513)", credits: 3 },
+      { name: "Professional Elective V", credits: 3 },
+      { name: "Professional Elective VI", credits: 3 },
+      { name: "Internship / Certification Course (AL23721)", credits: 2 }
+    ],
+
+    8: [
+      { name: "Open Elective III", credits: 3 },
+      { name: "Project Work (AL23821)", credits: 10 }
+    ]
   }
 };
 
@@ -98,6 +187,9 @@ const tbody = document.getElementById("tbody");
 const cgpaEl = document.getElementById("cgpa");
 const totalCreditsEl = document.getElementById("totalCredits");
 const HISTORY_KEY = "cgpa_history";
+// Auto update copyright year
+document.getElementById("year").textContent = new Date().getFullYear();
+
 /* ---------- MODAL ---------- */
 const modal = document.getElementById("modalOverlay");
 const modalTitle = document.getElementById("modalTitle");

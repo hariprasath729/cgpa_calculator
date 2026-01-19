@@ -273,3 +273,10 @@ tr.incomplete{
   background: #020617;
   outline: 1px solid var(--accent);
 }
+/* Copyright footer */
+.copyright {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--muted);
+  padding: 0.8rem 0 5rem; /* bottom padding avoids overlap with sticky CGPA */
+}
