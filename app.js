@@ -249,7 +249,8 @@ function calc(){
     else r.classList.remove("incomplete");
     if(c&&g){tc+=c;tp+=c*gradePoints[g];}
   });
-  const newCGPA = tc ? (tp/tc).toFixed(2) : "0.00";
+ const raw = tp / tc;
+const newCGPA = tc ? Math.floor(raw * 100) / 100 : 0;
   if(cgpaEl.textContent!==newCGPA){
     cgpaEl.classList.add("cgpa-update");
     setTimeout(()=>{
