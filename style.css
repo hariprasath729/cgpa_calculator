@@ -280,3 +280,8 @@ tr.incomplete{
   color: var(--muted);
   padding: 0.8rem 0 5rem; /* bottom padding avoids overlap with sticky CGPA */
 }
+#desclimer {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-top: 0.4rem;
+}
