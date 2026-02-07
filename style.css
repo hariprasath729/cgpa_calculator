@@ -27,6 +27,11 @@ select{
   padding:.6rem;
   border-radius:.5rem;
   border:none;
+  transition:transform 0.2s ease;
+}
+select:focus{
+  transform:scale(1.03);
+  outline:none;
 }
 main{
   padding:1rem;
@@ -283,5 +288,4 @@ tr.incomplete{
 #desclimer {
   font-size: 0.75rem;
   color: var(--muted);
-  margin-top: 0.4rem;
-}
+  margin-top: 0.4rem;}
